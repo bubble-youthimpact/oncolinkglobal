@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found | Oncolink Global</title>
+<script>
+  /* GitHub Pages serves this file for any path it can't find (e.g. /about).
+     Forward the path to index.html, which shows the right page with a clean URL,
+     or its own 404 page if the path really doesn't exist.
+     On username.github.io/REPO keep 1 path segment; on a custom domain keep 0. */
+  (function(){
+    var keep = location.hostname.endsWith('github.io') ? 1 : 0;  /* set to 0 if the repo itself is named username.github.io */
+    var parts = location.pathname.split('/');
+    var base = parts.slice(0, 1 + keep).join('/');
+    var rest = '/' + parts.slice(1 + keep).join('/');
+    location.replace(location.origin + base + '/?p=' + encodeURIComponent(rest + location.search) + location.hash);
+  })();
+</script>
+<style>
+  body{margin:0;font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:#161311;background:#fff;display:grid;place-items:center;min-height:100vh;text-align:center;padding:24px}
+  h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:64px;margin:0;color:#FF6233}
+  a{color:#FF6233}
+</style>
+</head>
+<body>
+  <div><h1>404</h1><p>Page not found. <a href="/">Go to the home page</a></p></div>
+</body>
+</html>
